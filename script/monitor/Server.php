@@ -14,6 +14,8 @@ function port() {
     if ($result != 1) {
         //TODO 报警
         echo date("Ymd H:i:s") . PHP_EOL;
+    } else {
+        echo "OK";
     }
 }
 

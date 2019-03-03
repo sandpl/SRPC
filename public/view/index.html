@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    我是通过httpserver得到的景泰职员
+swoole
+</body>
+<script>
+    var wsUrl = "ws://127.0.0.1:8811";
+    var websocket = new WebSocket(wsUrl);
+    websocket.onopen = function (evt) {
+        websocket.send("hello ZI");
+        console.log("connect success");
+    }
+    websocket.onmessage = function (evt) {
+        console.log("ws-server-return-data:" + evt.data);
+    }
+
+    websocket.onclose = function (evt) {
+        console.log("close")
+    }
+
+    websocket.onerror = function (evt, e) {
+        console.log("error" + e.data)
+    }
+</script>
+</html>

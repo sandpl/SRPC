@@ -17,14 +17,6 @@ define("APP_PATH", BASE_PATH . 'app' . DS);
 define("ZI_PATH", __DIR__ . DS);
 
 
-if ('cli' !== php_sapi_name()) {
-    exit('服务只能在cli模式下运行');
-}
-
-if (!extension_loaded('swoole')) {
-    exit("请安装swoole扩展");
-}
-
 
 class Zi
 {
